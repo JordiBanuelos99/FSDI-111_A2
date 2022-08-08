@@ -1,6 +1,6 @@
 import requests
 
-URL= "HTTP://127.0.0.1:5000/users"
+URL= "HTTP://127.0.0.1:5001/users"
 
 def update_user(id, first_name, last_name, hobbies):
     user = {

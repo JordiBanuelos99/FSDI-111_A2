@@ -1,10 +1,9 @@
 import requests
 
-URL= "HTTP://127.0.0.1:5000/users"
+URL= "HTTP://127.0.0.1:5001/users"
 
 def update_user(id, first_name, last_name, hobbies):
     user = {
-        "ID": id,
         "first_name": first_name,
         "last_name": last_name,
         "hobbies": hobbies
@@ -20,7 +19,6 @@ def update_user(id, first_name, last_name, hobbies):
         )
 
 if __name__ == "__main__":
-    id = input("Type in the user's ID: ")
     fname = input("Type in the user's first name: ")
     lname = input ("Type in the user's last name: ")
     hobbies = input ("Type in the user's favorite hobbies: ")

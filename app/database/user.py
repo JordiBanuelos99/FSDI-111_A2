@@ -40,7 +40,7 @@ def insert (user_dict):
             INSERT INTO user (
                 first_name,
                 last_name,
-                hobbbies
+                hobbies
             ) VALUES (?, ?, ?)
     """
     cursor = get_db()
@@ -59,7 +59,7 @@ def update (pk, user_data):
         UPDATE user
         SET first_name=?,
         last_name,
-        hobbbies
+        hobbies
         WHERE id=?
     """
     cursor = get_db()

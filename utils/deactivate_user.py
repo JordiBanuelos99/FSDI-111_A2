@@ -1,6 +1,6 @@
 import requests
 
-URL= "HTTP://127.0.0.1:5000/users"
+URL= "HTTP://127.0.0.1:5001/users"
 
 def deactivate_user(id):
     url=URL+"/"+id
@@ -14,5 +14,4 @@ def deactivate_user(id):
         )
 
 if __name__ == "__main__":
-    id = input("Type in the user's ID to delete: ")
     deactivate_user(id)
