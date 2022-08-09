@@ -1,6 +1,6 @@
 import requests
 
-URL= "HTTP://127.0.0.1:5000/vehicles"
+URL= "HTTP://127.0.0.1:5001/vehicles"
 
 def deactivate_vehicle(id):
     url=URL+"/"+id
@@ -14,4 +14,5 @@ def deactivate_vehicle(id):
         )
 
 if __name__ == "__main__":
+    id = input ("Type in the ID of the vehicle: ")
     deactivate_vehicle(id)

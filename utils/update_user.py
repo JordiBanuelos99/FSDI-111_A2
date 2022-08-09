@@ -19,6 +19,7 @@ def update_user(id, first_name, last_name, hobbies):
         )
 
 if __name__ == "__main__":
+    id = input ("Type in the user's ID: ")
     fname = input("Type in the user's first name: ")
     lname = input ("Type in the user's last name: ")
     hobbies = input ("Type in the user's favorite hobbies: ")

@@ -22,11 +22,11 @@ def update_vehicle(id, vehicle_model, vehicle_type, vehicle_year, vehicle_brand,
         )
 
 if __name__ == "__main__":
-    vid = input ("Type in the ID of the vehicle: ")
+    id = input ("Type in the ID of the vehicle: ")
     vmodel = input("Type in the model of the vehicle: ")
     vtype = input ("Type in the type of vehicle: ")
     vyear = input ("Type in the vehicle's year of release: ")
     vbrand = input ("Type in the brand of the vehicle: ")
     vtransmission = input ("Type in the transmission mode: ")
     uid = input ("And finally, type in the owner's ID number: ")
-    update_vehicle(vmodel, vtype, vyear, vbrand, vtransmission, uid)
+    update_vehicle(id, vmodel, vtype, vyear, vbrand, vtransmission, uid)

@@ -14,4 +14,5 @@ def deactivate_user(id):
         )
 
 if __name__ == "__main__":
+    id = input ("Type in the user's ID: ")
     deactivate_user(id)
