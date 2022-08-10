@@ -58,8 +58,8 @@ def update (pk, user_data):
     statement = """
         UPDATE user
         SET first_name=?,
-        last_name,
-        hobbies
+        last_name=?,
+        hobbies=?
         WHERE id=?
     """
     cursor = get_db()

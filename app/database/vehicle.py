@@ -16,7 +16,7 @@ def output_formatter(results):
 
 def scan():
     cursor = get_db().execute(
-        "SELECT * FROM vehicle WHERE active = 1", ()
+        "SELECT * FROM vehicle", ()
     )
     results=cursor.fetchall()
     cursor.close()
@@ -69,11 +69,11 @@ def update (pk, vehicle_data):
     statement = """
         UPDATE vehicle
         SET vehicle_model=?,
-        vehicle_type,
-        vehicle_year,
-        vehicle_brand,
-        vehicle_transmission,
-        id_user
+        vehicle_type=?,
+        vehicle_year=?,
+        vehicle_brand=?,
+        vehicle_transmission=?,
+        id_user=?
         WHERE id=?
     """
     cursor = get_db()
@@ -81,8 +81,8 @@ def update (pk, vehicle_data):
     cursor.commit()
     cursor.close()
 
-def deactivate_user(pk):
+def deactivate_vehicle(pk):
     cursor = get_db()
-    cursor.execute ("UPDATE vehicle SET active=0 WHERE id=? ", (pk, ))
+    cursor.execute ("DELETE FROM vehicle WHERE id_vehicle=? ", (pk, ))
     cursor.commit()
     cursor.close()

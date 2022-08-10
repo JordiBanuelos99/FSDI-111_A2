@@ -64,19 +64,19 @@ def update_user(pk):
 
 @app.delete("/users/<int:pk>")
 def deactivate_user(pk):
-    user.deactivate(pk)
+    user.deactivate_user(pk)
     return "", 204
+
+# Vehicles
 
 @app.get("/vehicles")
 def get_all_vehicles():
-    user_list = vehicle.scan()
+    vehicle_list = vehicle.scan()
     out = {
         "status":"ok",
-        "users":user_list
+        "vehicles":vehicle_list
     }
     return out
-
-# Vehicles
 
 @app.get("/vehicles/<int:pk>")
 def get_vehicle_by_id(pk):
@@ -105,5 +105,5 @@ def update_vehicle(pk):
 
 @app.delete("/vehicles/<int:pk>")
 def deactivate_vehicle(pk):
-    vehicle.deactivate(pk)
+    vehicle.deactivate_vehicle(pk)
     return "", 204
